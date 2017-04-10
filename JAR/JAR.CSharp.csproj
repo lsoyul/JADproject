@@ -86,9 +86,14 @@
     <Compile Include="Assets\Scripts\Manager\GameSceneManager.cs" />
     <Compile Include="Assets\Scripts\Manager\ManagerController.cs" />
     <Compile Include="Assets\Scripts\Manager\ManagerTemplate.cs" />
+    <Compile Include="Assets\Scripts\MapEditor\Grid.cs" />
+    <Compile Include="Assets\Scripts\MapEditor\GridEditor.cs" />
+    <Compile Include="Assets\Scripts\MapEditor\GridWindow.cs" />
+    <Compile Include="Assets\Scripts\MapEditor\TileSet.cs" />
     <Compile Include="Assets\Scripts\PlayerControllerScripts.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Sprites\Tiles\resources.txt" />
     <None Include="Assets\spritefont_and_other\document_and_picturelist\readme.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
