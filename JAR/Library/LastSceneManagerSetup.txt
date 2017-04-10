@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/scene_gaming.unity
+- path: C:/SGA-Unity/day20 - SceneManager/SceneManager/Assets/01_Scenes/01_TitleScene.unity
   isLoaded: 1
   isActive: 1
