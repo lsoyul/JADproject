@@ -1,0 +1,26 @@
+1. TitleScene
+
+=> Loading
+	- PlayerManager
+		- PlayerInfo
+			- Equipments
+			- Level
+			- Items
+			- exp
+	- UIManager
+	- LevelManager
+		- 
+
+
+
+2. VillageScene
+
+=> Loading
+	- StageManager
+	- EnemyManager
+
+3. StageScene
+
+=> Destruct
+	- StageManager
+	- EnemyManager
