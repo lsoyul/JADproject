@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ManagerController : MonoBehaviour {
+public class ManagerController : MonoBehaviour
+{
 
     void Awake()
     {
@@ -16,7 +17,7 @@ public class ManagerController : MonoBehaviour {
     {
         GameSceneManager.Instance.GotoScene(EGameScene.BATTLESTAGE);
     }
-	
+
 
     private void InitManager()
     {

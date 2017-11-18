@@ -12,14 +12,15 @@ public enum EGameScene
     TEST
 }
 
-public class GameSceneManager : ManagerTemplate<GameSceneManager> {
+public class GameSceneManager : ManagerTemplate<GameSceneManager>
+{
 
     private EGameScene currentScene = EGameScene.NONE;
     public EGameScene CurrentScene { get { return currentScene; } }
 
     public void GotoScene(EGameScene scene)
     {
-        switch(scene)
+        switch (scene)
         {
             case EGameScene.NONE:
                 break;
@@ -34,7 +35,7 @@ public class GameSceneManager : ManagerTemplate<GameSceneManager> {
                 break;
         }
     }
-    
+
     IEnumerator AsynchronousLoad(string scene)
     {
         yield return null;
@@ -42,7 +43,7 @@ public class GameSceneManager : ManagerTemplate<GameSceneManager> {
         AsyncOperation ao = SceneManager.LoadSceneAsync(scene);
         ao.allowSceneActivation = false;
 
-        while(!ao.isDone)
+        while (!ao.isDone)
         {
             // [0, 0.9] > [0, 1]
             float progress = Mathf.Clamp01(ao.progress / 0.9f);
@@ -53,7 +54,7 @@ public class GameSceneManager : ManagerTemplate<GameSceneManager> {
             {
                 //Debug.Log("Press a key to start");
                 //if (Input.anyKeyDown)
-                    ao.allowSceneActivation = true;
+                ao.allowSceneActivation = true;
             }
 
             yield return null;

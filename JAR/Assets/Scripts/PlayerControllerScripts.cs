@@ -23,6 +23,8 @@ public class PlayerControllerScripts : MonoBehaviour
 
     public TextMesh textForDebug;
 
+    public int stompDamage = 60;
+
     // Use this for initialization
     void Start()
     {
@@ -115,6 +117,19 @@ public class PlayerControllerScripts : MonoBehaviour
             {
                 Debug.Log("Collision! + " + collision);
                 rigidBody2D.AddForce(Vector2.up * 15, ForceMode2D.Impulse);
+
+                // Effect
+                GameObject effectPrefab = Resources.Load("Prefabs/Effects/SparkleMuzzleFlashRed") as GameObject;
+
+                GameObject MuzzleFlashRed = MonoBehaviour.Instantiate(effectPrefab) as GameObject;
+
+                Vector3 particleSpawnPos = rigidBody2D.transform.position;
+                particleSpawnPos.y -= 1f;
+
+                MuzzleFlashRed.GetComponent<Transform>().position = particleSpawnPos;
+
+                collision.GetComponent<EnemyUnitInfo>().deal_damage(stompDamage);
+
             }
         }
     }
